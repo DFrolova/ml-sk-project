@@ -16,20 +16,26 @@ The main tasks of the project are:
 - to conduct the experiments exactly as described in the publication (25%)
 - for providing explanations on why N-BEATS works and when it does not (10%)
 
-1)  Concerning the first task, one can find scripts for loading time series from FRED (https://fred.stlouisfed.org/) in the corresponding folder. id_loader_final.ipynb is used to get id of time series from the site, series_loader_final.ipynb is used to load time series from FRED by their id. The main difference with existing APIs (e.g. could be found here https://fred.stlouisfed.org/docs/api/fred/) for loading time series from FRED is that we use Selenium for requesting id and time series, without Selenium it is not possible to download large amount of time series (~290k). Scripts are written with instructions. In order to collect other datasets one do not need to use any scripts. All collected datasets one can find here https://drive.google.com/drive/folders/1U8He5OXbLHBjDzm8AX8dDme_2ygnXhmy .
+1)  Concerning the first task, one can find scripts for loading time series from FRED (https://fred.stlouisfed.org/) in the corresponding folder.
+**id_loader_final.ipynb** is used to get id of time series from the site
+**series_loader_final.ipynb** is used to load time series from FRED by their id
+The main difference with existing APIs (e.g. could be found here https://fred.stlouisfed.org/docs/api/fred/) for loading time series from FRED is that we use Selenium for requesting id and time series, without Selenium it is not possible to download large amount of time series (~290k). Scripts are written with instructions. In order to collect other datasets one do not need to use any scripts. All collected datasets one can find here https://drive.google.com/drive/folders/1U8He5OXbLHBjDzm8AX8dDme_2ygnXhmy .
 
-2)  Conceringn running baselines, one can ask mr. Max Balrog.
+2)  Concerning running baselines, one could find script written in R **Baselines.r**.
+...
+Maxim's description
+...
 
-3)  Concerning the other tasks, one can find N-BEATS training and predicting in the corresponding folder.
+3)  Concerning the other tasks, one can find N-BEATS training and predicting scripts in the corresponding folder.
 
-3.1)  Notebook train_nbeats_1.ipynb is for training ensembles of N-BEATS. There are different data frequences (data_types) for both training datasets (M4 and FRED).
+3.1)  Notebook **train_nbeats_1.ipynb** is for training ensembles of N-BEATS. There are different data frequences (data_types) for both training datasets (M4 and FRED).
 Parameters to set:
 - data_type: ('yearly', 'quarterly', 'monthly', 'weekly', 'daily', 'hourly') for M4, ('yearly', 'quarterly', 'monthly') for fred - requency to train on
 - dataset: 'm4' or 'fred' - dataset to train on
 
 Notebook saves trained models to a FOLDER (may be changed) into a file CHECKPOINT_NAME.
 
-3.2)  In order to predict time series one need to use ML_project_final.ipynb.
+3.2)  In order to predict time series one need to use **ML_project_final.ipynb**.
 There are parameters to change in the main block of notebook:
 data_type: frequency of data which is needed to predict. May be yearly, quarterly, monthly, daily, weekly, hourly, other depending on the dataset
 - train_dataset: 'm4' or 'fred' - dataset on which models were trained
@@ -38,4 +44,4 @@ This code uses files CHECKPOINT_NAME in FOLDER as path to trained models - shoul
 Also, it saves predictions to file PREDS_FILENAME.
 After execution of this cell metric on an ensemble of models is printed, and a picture with visualization of predictions of first 9 time series is saved into file 'n_beats_111.png'. There blue line corresponds to historical data of time series, green line - true values, red line - predictions.
 
-3.3) There is additional notebook for preprocessing FRED data. It is needed because some time series of FRED contains None, some time series are constants, some time series are too short, etc. 
+3.3) There is additional notebook **Preprocess_FRED.ipynb** for preprocessing FRED data. It is needed because some time series of FRED contains None, some time series are constants, some time series are too short, etc. 
