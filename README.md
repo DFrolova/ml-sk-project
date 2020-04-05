@@ -31,7 +31,7 @@ Maxim's description
 
 3.1)  Notebook **train_nbeats_1.ipynb** is for training ensembles of N-BEATS. There are different data frequences (data_types) for both training datasets (M4 and FRED).
 Parameters to set:
-- data_type: ('yearly', 'quarterly', 'monthly', 'weekly', 'daily', 'hourly') for M4, ('yearly', 'quarterly', 'monthly') for fred - requency to train on
+- data_type: ('yearly', 'quarterly', 'monthly', 'weekly', 'daily', 'hourly') for M4, ('yearly', 'quarterly', 'monthly') for fred - frequency to train on
 - dataset: 'm4' or 'fred' - dataset to train on
 
 Notebook saves trained models to a FOLDER (may be changed) into a file CHECKPOINT_NAME.
@@ -45,4 +45,41 @@ This code uses files CHECKPOINT_NAME in FOLDER as path to trained models - shoul
 Also, it saves predictions to file PREDS_FILENAME.
 After execution of this cell metric on an ensemble of models is printed, and a picture with visualization of predictions of first 9 time series is saved into file 'n_beats_111.png'. There blue line corresponds to historical data of time series, green line - true values, red line - predictions.
 
-3.3) There is additional notebook **Preprocess_FRED.ipynb** for preprocessing FRED data. It is needed because some time series of FRED contains None, some time series are constants, some time series are too short, etc. 
+3.3) There is additional notebook **Preprocess_FRED.ipynb** for preprocessing FRED data. It is needed because some time series of FRED contains None, some time series are constants, some time series are too short, etc.
+
+In the figure below one can see how well Meta Learning approach based on N-BEATS model can predict time series. Green are real time series, red is predicted by N-BEATS. Model was trained on M4, here predictions for Traffic dataset.
+
+
+In the table below there are averaged results of model performance on different datasets.
+
+\begin{table}[hb]
+\caption{Performance of N-BEATS and baseline models on M4 dataset; sMAPE; lower values are better}
+\label{M4 results}
+\vskip 0.15in
+\begin{center}
+\begin{small}
+\begin{sc}
+\begin{tabular}{lcccc}
+\toprule
+& Year  & Quart & Month & Average \\
+& (23k) & (24k) & (48k) &  (95k)  \\
+\midrule
+\textbf{Benchmarks}                   \\
+%\vskip 0.1in
+ \\
+
+SNa\"{\i}ve    & 16.34 & 12.52 & 15.99 & 15.20 \\
+Theta          & 14.56 & 10.31 & 13.01 & 12.70 \\
+ARIMA          & 15.20 & 10.56 & 13.54 & 13.20 \\
+
+\midrule
+N-BEATS(FRED)      & 13.74 & 10.97 & 14.76 & 13.56 \\
+
+
+\bottomrule
+\end{tabular}
+\end{sc}
+\end{small}
+\end{center}
+\vskip -0.1in
+\end{table}
