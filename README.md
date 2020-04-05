@@ -53,10 +53,10 @@ In the figure below one can see how well Meta Learning approach based on N-BEATS
 In the table below there are averaged results of model performance on different datasets.
 
 
-| model / test dataset | M4 | FRED | M3 |
-|----------------------|----|------|----|
-| SNaive | 15.20 | 22.26 | 15.18 |
-| Theta | 12.70 | 22.27 | 12.79 |
-| ARIMA | 13.20 | 22.02 | 13.80 |
-| N-BEATS(M4) | - | 20.68 | 12.63 |
-| N-BEATS(FRED) | 13.56 | - | 14.09 |
+| model / test dataset | M4 | FRED | M3 | TOURISM |  |  |
+|----------------------|----|------|----|---------|  |  |
+| SNaive | 15.20 | 22.26 | 15.18 | 20.99 |  |  |
+| Theta | 12.70 | 22.27 | 12.79 | 20.69 |  |  |
+| ARIMA | 13.20 | 22.02 | 13.80 | 23.65 |  |  |
+| N-BEATS(M4) | - | 20.68 | 12.63 | 22.70 |  |  |
+| N-BEATS(FRED) | 13.56 | - | 14.09 | 23.41 |  |  |
