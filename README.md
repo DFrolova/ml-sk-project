@@ -49,14 +49,15 @@ After execution of this cell metric on an ensemble of models is printed, and a p
 
 In the figure below one can see how well Meta Learning approach based on N-BEATS model can predict time series. Green are real time series, red is predicted by N-BEATS. Model was trained on M4, here predictions for Traffic dataset.
 
+![Predictions of N-BEATS](traffic.png)
 
 In the table below there are averaged results of model performance on different datasets.
 
 
 | model / test dataset | M4 | FRED | M3 | TOURISM | TRAFFIC | ELECTRICITY |
-|----------------------|----|------|----|---------|---------| |
-| SNaive | 15.20 | 22.26 | 15.18 | 20.99 | 0.506 |  |
-| Theta | 12.70 | 22.27 | 12.79 | 20.69 | 0.506 |  |
-| ARIMA | 13.20 | 22.02 | 13.80 | 23.65 | 0.201 |  |
-| N-BEATS(M4) | - | 20.68 | 12.63 | 22.70 | 0.259 |  |
-| N-BEATS(FRED) | 13.56 | - | 14.09 | 23.41 | 0.230 |  |
+|----------------------|----|------|----|---------|---------|-------------|
+| SNaive | 15.20 | 22.26 | 15.18 | 20.99 | 0.506 | 0.282 |
+| Theta | 12.70 | 22.27 | 12.79 | 20.69 | 0.506 | 0.286 |
+| ARIMA | 13.20 | 22.02 | 13.80 | 23.65 | 0.201 | 0.308 |
+| N-BEATS(M4) | - | 20.68 | 12.63 | 22.70 | 0.259 | 0.168 |
+| N-BEATS(FRED) | 13.56 | - | 14.09 | 23.41 | 0.230 | 0.219 |
