@@ -52,9 +52,10 @@ In the figure below one can see how well Meta Learning approach based on N-BEATS
 
 In the table below there are averaged results of model performance on different datasets.
 
+
 | model / test dataset | M4 | FRED | 
-------------------------
+|----------------------|----|------|
 | N-BEATS(M4) | - | 20.68 |
-------------------------
+|----------------------|----|------|
 | N-BEATS(FRED) | 13.56 | - |
-------------------------
+|----------------------|----|------|
