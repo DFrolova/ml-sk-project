@@ -22,10 +22,8 @@ The main tasks of the project are:
 
 The main difference with existing APIs (e.g. could be found here https://fred.stlouisfed.org/docs/api/fred/) for loading time series from FRED is that we use Selenium for requesting id and time series, without Selenium it is not possible to download large amount of time series (~180k). Scripts are written with instructions. In order to collect other datasets one do not need to use any scripts. All collected datasets one can find here https://drive.google.com/drive/folders/1U8He5OXbLHBjDzm8AX8dDme_2ygnXhmy .
 
-2)  Concerning running baselines, one could find script written in R **Baselines.r**.
-...
-Maxim's description
-...
+2)  In the folder baselines one can find script B**Baselines.r** written in R which is the implementation of statistical benchmarks (SNaive, Theta, ARIMA) on the following datasets: M4, FRED, M3, TOURISM, ELECTRICITY, TRAFFIC.
+In order to run it, necessary libraries should be installed (library names and intructions could be found inside).
 
 3)  Concerning the other tasks, one can find N-BEATS training and predicting scripts in the corresponding folder.
 
