@@ -55,7 +55,8 @@ In the table below there are averaged results of model performance on different 
 
 | model / test dataset | M4 | FRED | 
 |----------------------|----|------|
+| SNa\"{\i}ve | 15.20 | 22.26 |
+| Theta 12.70 | 22.27 |
+| ARIMA | 13.20 | 22.02 |
 | N-BEATS(M4) | - | 20.68 |
-|----------------------|----|------|
 | N-BEATS(FRED) | 13.56 | - |
-|----------------------|----|------|
