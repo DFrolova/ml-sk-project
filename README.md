@@ -16,11 +16,10 @@ The main tasks of the project are:
 - to conduct the experiments exactly as described in the publication (25%)
 - for providing explanations on why N-BEATS works and when it does not (10%)
 
-Concerning the first task, one can find scripts for loading time series from FRED (https://fred.stlouisfed.org/) in the corresponding folder. id_loader_final.ipynb is used to get id of time series from the site, series_loader_final.ipynb is used to load time series from FRED by their id. The main difference with existing APIs (e.g. could be found here https://fred.stlouisfed.org/docs/api/fred/) for loading time series from FRED is that we use Selenium for requesting id and time series, without Selenium it is not possible to download large amount of time series (~290k)
+Concerning the first task, one can find scripts for loading time series from FRED (https://fred.stlouisfed.org/) in the corresponding folder. id_loader_final.ipynb is used to get id of time series from the site, series_loader_final.ipynb is used to load time series from FRED by their id. The main difference with existing APIs (e.g. could be found here https://fred.stlouisfed.org/docs/api/fred/) for loading time series from FRED is that we use Selenium for requesting id and time series, without Selenium it is not possible to download large amount of time series (~290k). Scripts are written with instructions.
 
-Concerning the second task, one could find implementation of N-BEATS in 
-One can find N-BEATS training and predicting in the corresponding folder.
+Conceringn running baselines, one can ask mr. Max Balrog.
 
-One can find statistical baselines for time series forecasting in the folder named baselines.
+Concerning the other tasks, one can find N-BEATS training and predicting in the corresponding folder.
 
 
