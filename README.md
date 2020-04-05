@@ -21,5 +21,27 @@ Concerning the first task, one can find scripts for loading time series from FRE
 Conceringn running baselines, one can ask mr. Max Balrog.
 
 Concerning the other tasks, one can find N-BEATS training and predicting in the corresponding folder.
+Notebook train_nbeats_1.ipynb is for training ensembles of N-BEATS. There are different data frequences (data_types) for both training datasets (M4 and FRED).
 
+Parameters to set:
 
+data_type: ('yearly', 'quarterly', 'monthly', 'weekly', 'daily', 'hourly') for M4, ('yearly', 'quarterly', 'monthly') for fred - requency to train on
+
+dataset: 'm4' or 'fred' - dataset to train on
+
+Notebook saves trained models to a FOLDER (may be changed) into a file CHECKPOINT_NAME.
+
+In order to predict time series one need to use ML_project_final.ipynb.
+There are parameters to change in the main block of notebook:
+
+data_type: frequency of data which is needed to predict. May be yearly, quarterly, monthly, daily, weekly, hourly, other depending on the dataset
+
+train_dataset: 'm4' or 'fred' - dataset on which models were trained
+
+test_dataset: dataset on which we want to get predictions. Can be m4, m3, fred, electricity, traffic, tourism
+
+This code uses files CHECKPOINT_NAME in FOLDER as path to trained models - should be changed if you use another path.
+
+Also, it saves predictions to file PREDS_FILENAME.
+
+After execution of this cell metric on an ensemble of models is printed, and a picture with visualization of predictions of first 9 time series is saved into file 'n_beats_111.png'. There blue line corresponds to historical data of time series, green line - true values, red line - predictions.
