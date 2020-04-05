@@ -52,34 +52,9 @@ In the figure below one can see how well Meta Learning approach based on N-BEATS
 
 In the table below there are averaged results of model performance on different datasets.
 
-\begin{table}[hb]
-\caption{Performance of N-BEATS and baseline models on M4 dataset; sMAPE; lower values are better}
-\label{M4 results}
-\vskip 0.15in
-\begin{center}
-\begin{small}
-\begin{sc}
-\begin{tabular}{lcccc}
-\toprule
-& Year  & Quart & Month & Average \\
-& (23k) & (24k) & (48k) &  (95k)  \\
-\midrule
-\textbf{Benchmarks}                   \\
-%\vskip 0.1in
- \\
-
-SNa\"{\i}ve    & 16.34 & 12.52 & 15.99 & 15.20 \\
-Theta          & 14.56 & 10.31 & 13.01 & 12.70 \\
-ARIMA          & 15.20 & 10.56 & 13.54 & 13.20 \\
-
-\midrule
-N-BEATS(FRED)      & 13.74 & 10.97 & 14.76 & 13.56 \\
-
-
-\bottomrule
-\end{tabular}
-\end{sc}
-\end{small}
-\end{center}
-\vskip -0.1in
-\end{table}
+| model / test dataset | M4 | FRED | 
+------------------------
+| N-BEATS(M4) | - | 20.68 |
+------------------------
+| N-BEATS(FRED) | 13.56 | - |
+------------------------
