@@ -1,8 +1,8 @@
 # ml-sk-project
 
-This is repository of team #8 (forecasters), ml course project.
+This is repository of team #8 (forecasters), containing scripts for "Machine Learning and Applications" course project.
 
-The objective of this project is reproducing the paper "Meta-learning framework with applications to zero-shot time-series forecasting" https://arxiv.org/pdf/2002.02887.pdf
+The objective of this project is reproducing the paper "Meta-learning framework with applications to zero-shot time-series forecasting" https://arxiv.org/pdf/2002.02887.pdf.
 
 The paper is about pure deep learning approach to time series forecasting. Authors claim that their model is a new SOTA in time series forecasting.
 
