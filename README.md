@@ -20,9 +20,9 @@ The main tasks of the project are:
 - **id_loader_final.ipynb** is used to get id of time series from the site
 - **series_loader_final.ipynb** is used to load time series from FRED by their id
 
-The main difference with existing APIs (e.g. could be found here https://fred.stlouisfed.org/docs/api/fred/) for loading time series from FRED is that we use Selenium for requesting id and time series, without Selenium it is not possible to download large amount of time series (~180k). Scripts are written with instructions. In order to collect other datasets one do not need to use any scripts. All collected datasets one can find here https://drive.google.com/drive/folders/1U8He5OXbLHBjDzm8AX8dDme_2ygnXhmy .
+The main difference with existing APIs (e.g. could be found here https://fred.stlouisfed.org/docs/api/fred/) for loading time series from FRED is that we use Selenium for requesting id and time series, without Selenium it is not possible to download large amount of time series (~180k). Scripts are written with instructions. In order to collect other datasets one do not need to use any scripts. All collected datasets one can find here https://drive.google.com/drive/folders/1if7Zf58lDTBo0v-lx8RTbcZrSWX9U6K0?usp=sharing .
 
-2)  In the folder baselines one can find script B**Baselines.r** written in R which is the implementation of statistical benchmarks (SNaive, Theta, ARIMA) on the following datasets: M4, FRED, M3, TOURISM, ELECTRICITY, TRAFFIC.
+2)  In the folder baselines one can find script **Baselines.r** written in R which is the implementation of statistical benchmarks (SNaive, Theta, ARIMA) on the following datasets: M4, FRED, M3, TOURISM, ELECTRICITY, TRAFFIC.
 In order to run it, necessary libraries should be installed (parallel, Metrics, forecast, forecTheta).
 
 Some datasets are really large, script run takes a lot of time (~2-3 days of pure time for all datasets). The most straightforward way to check this script is to define all needed functions (till baselines_forecast), specify path to TOURISM dataset in read.csv function and run the part of the script for TOURISM dataset (this dataset is quite small and so is running time). Obtained numbers will be the same as in the project report. For other parts of the script the procedure is the same.
